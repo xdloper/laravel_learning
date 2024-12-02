@@ -28,8 +28,8 @@ class authController extends Controller
 
         // => burada db ye gidilecek
 
-        $accessToken = JWT::encode($payload, $secretKey, 'HS256');
-
+        $accessToken = JWT::encode($payload['data'], $secretKey, 'HS256');
+        
         return response()->json([
             'cameData' => [
                 ...$request->all()
