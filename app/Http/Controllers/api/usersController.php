@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class usersController extends Controller
-{
+{ 
     public function getUsers(Request $request){
         return response()->json([
             'success' => true,
